@@ -16,7 +16,22 @@
     </ul>
     <div>
         <button class="btn">Dark</button>
-    </div> 
+    </div>]
+    <div>
+        <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+    <script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+                .withAppKey('dGV4dHJvdGVhZG9yOjViZWQzZGE2LTQ5ZjYtNGE1Yy1hY2Y5LTZlOTg0OTIyMWQxNA==')
+                .withButton({"color":"#23bf2c","icon":""})
+                .withCustomCommonUrl('https://folhadesaopaulo.chat.blip.ai/')
+                .build();
+        }
+    })();
+    </script>
+            
+    </div>
 
     <script src="app.js"></script>
     <noscript>Você precisa habilitar o JavaScript para ver todo o conteúdo do site</noscript>
