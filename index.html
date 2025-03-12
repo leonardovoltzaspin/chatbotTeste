@@ -11,17 +11,31 @@
     <p>Interaja com nosso chatbot clicando no botão abaixo.</p>
     
     <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-    <script>
-        (function () {
-            window.onload = function () {
-                new BlipChat()
-                    .withAppKey('dGV4dHJvdGVhZG9yOjViZWQzZGE2LTQ5ZjYtNGE1Yy1hY2Y5LTZlOTg0OTIyMWQxNA==')
-                    .withButton({"color":"#23bf2c","icon":""})
-                    .withCustomCommonUrl('https://folhadesaopaulo.chat.blip.ai/')
-                    .build();
-            }
-        })();
-    </script>
+<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+            .withTarget('chat-blip')
+            .withAppKey('cm90ZWFkb3Jmb2xoYTpiMDA2N2YxMi0yNTVmLTRjNTctYWE2ZS02ZWQ2ODI0MjkyOWI=')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .withCustomCommonUrl('https://folhadesaopaulo.chat.blip.ai/')
+            .withAccount({
+                fullName: 'Eduardo Schaefer',
+                email:'eduardo@aspin.inf.br',
+                source: 'AtendAssinante',
+                taxDocument: '3436448001',
+                extras: {
+                    "assinanteAtivo": "SIM",
+                    "tipo": "ILIMITADO",
+                    "customer_id": "31328115",
+                    "protocol_number": "79983675",
+                    "subscription_id": "41388552"
+                },
+            })
+            .build();
+        }
+    })();
+</script>
     
     <script src="app.js"></script>
 </body>
