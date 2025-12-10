@@ -17,6 +17,12 @@
             new BlipChat()
             .withTarget('chat-blip')
             .withAppKey('dGV4dHJvdGVhZG9yOjViZWQzZGE2LTQ5ZjYtNGE1Yy1hY2Y5LTZlOTg0OTIyMWQxNA==')
+			.withEventHandler(BlipChat.LOAD_EVENT, function () {
+      			blipClient.sendMessage({
+                "type": "text/plain",
+                "content": "Cancelar"
+       		 });
+
             .withButton({"color":"#2CC3D5","icon":""})
             .withCustomCommonUrl('https://folhadesaopaulo.chat.blip.ai/')
             .withAccount({
